@@ -1,2 +1,2 @@
-# Toy-Tactics
-Toy Tactics is a game made during Ludum Dare 49
+# ludum-dare-49
+

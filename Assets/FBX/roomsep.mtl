@@ -1,0 +1,14 @@
+# Created by Kenney (www.kenney.nl)
+
+newmtl stone(Clone)
+Kd 0.571 0.559 0.736
+
+newmtl stoneDark(Clone)
+Kd 0.403 0.39 0.594
+
+newmtl glass(Clone)
+Kd 1 1 1
+
+newmtl stoneLight(Clone)
+Kd 0.71 0.701 0.84
+
