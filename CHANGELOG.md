@@ -12,6 +12,45 @@
 [0.0.5] 05-10-2021
 
 [0.0.4] 04-10-2021
+* Added (Joe) - Made two towers level
+* Added (Joe) - Made restarting the scene work
+* Removed (Joe) - Removed scenes that are no longer needed
+* Added (Joe) - World spawner load from settingns
+* Changed (Joe) - Modified physics
+* Added (Joe) - Smashable glass
+* Added (Joe) - Damage burst
+* Fixed (Joe) - Stopped the jetpack turning on with the machine gun & jetpack fixes
+* Added (Joe) - Jetpack UI & UI for using items
+* Added (Joe) - Initialising players with a team inventory
+* Added (Joe) - Dynamic weapon wheel
+* Added (Joe) - Items limited supply
+* Added (Joe) - Sound effects & Sound manager
+* Added (Joe) - Bullet spray
+* Added (Joe) - Heavy boots & visuals
+* Added (Amy) - Audio
+* Added (Joe) - Music manager & hooked up audio
+* Added (Joe) - Weapon wheel shows amount left
+* Changed (Joe) - Scripts moved to script folder
+* Added (Joe) - Explosive batteries
+* Added (Joe) - Bowling ball weapon
+* Added (Joe) - Turn is now autoended after using weapons & short delay
+* Fixed (Joe) - Made AI work after changes
+* Changed (Joe) - Refactored AI to use coroutines
+* Changed (Joe) - Made explosives shake before exploding 
+* Changed (Joe) - Bot will only use weapons it actually has
+* Added (Joe) - AI picks the character it wants to use on the CPUs turn
+* Fixed (Joe) - Transition
+* Added (Joe) - Added warm up time to match controller
+* Added (Amy) - WorldSpaceUV.shadergraph shader for textures
+* Changed (Amy) - Level data updates
+* Added (Amy) - The AI picks the strongest team
+* Added (Amy) - Glass shatter particle
+* Added (Joe) - Room objects
+* Added (Joe) - Floor to two towers level
+* Changed (Joe) - Made the go button less ugly
+* Added (Joe) - Win screen lets you pick the next level
+* Added (Joe) - Working settings menu
+
 
 [0.0.3] 03-10-2021
 * Added (Amy) - Team data
