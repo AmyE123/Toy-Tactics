@@ -1,18 +1,28 @@
-* Added - For new features
-* Changed - For changes in existing functionality
-* Fixed - For any bug fixes
-* Removed - For now removed features
-* Deprecated - For soon to be removed features
+# Changelog
 
-# [Postjam Refactoring]
+All notable changes to the project will be documented in this file.
+
+**Added** - For new features
+
+**Changed** - For changes in existing functionality
+
+**Fixed** - For any bug fixes
+
+**Removed** - For now removed features
+
+**Deprecated** - For soon to be removed features
 
 ---
-# [Gamejam]
 
-## [0.0.5] 05-10-2021
+# Refactoring
+
+---
+# Gamejam
+
+## [0.0.5] 2021-10-05
 * Changed (Joe) - Updated settings to enable/disable postjam content, general postjam additions
 
-## [0.0.4] 04-10-2021
+## [0.0.4] 2021-10-04
 * Added (Joe) - Made two towers level
 * Added (Joe) - Made restarting the scene work
 * Removed (Joe) - Removed scenes that are no longer needed
@@ -70,7 +80,7 @@
 * Changed (Amy) - Updated some levels
 * Added (Joe) - Added rigidbodies to level 3
 
-## [0.0.3] 03-10-2021
+## [0.0.3] 2021-10-03
 * Added (Amy) - Team data
 * Changed (Amy) - UI Updates
 * Added (Amy) - Imported TMP
@@ -105,7 +115,7 @@
 * Added (Joe) - Title screen
 * Added (Amy) - Scenery on map
 
-## [0.0.2] 02-10-2021
+## [0.0.2] 2021-10-02
 * Added (Joe) - Basic player movement which is limited to a 'max amount'
 * Added (Amy) - Installed any other needed packages
 * Added (Amy) - Cinemachine camera setup in third person
@@ -132,5 +142,5 @@
 * Changed (Amy) - Hooked up health bar
 * Added (Joe) - Models and animations for soldier
 
-## [0.0.1] 01-10-2021
+## [0.0.1] 2021-10-01
 * Added (Joe) - Made the Unity project and added all the needed packages
