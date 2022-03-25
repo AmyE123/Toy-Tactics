@@ -10,6 +10,7 @@
 [Gamejam]
 
 [0.0.5] 05-10-2021
+* Changed (Joe) - Updated settings to enable/disable postjam content, general postjam additions
 
 [0.0.4] 04-10-2021
 * Added (Joe) - Made two towers level
