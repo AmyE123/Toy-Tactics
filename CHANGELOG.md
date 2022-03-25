@@ -2,6 +2,11 @@
 
 All notable changes to the project will be documented in this file.
 
+[Refactoring]()
+[Gamejam]()
+
+# Key
+
 **Added** - For new features
 
 **Changed** - For changes in existing functionality
