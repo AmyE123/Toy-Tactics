@@ -9,7 +9,7 @@ As this game started as a Gamejam project, I decided it might be nice to spend s
 
 I've had to reupload the project (with permission from all developers) to ensure the project didn't contain any paid assets, which means there isn't any history on the project from the Gamejam period.
 
-*You can read a Changelog with all the summarized changes made during the Gamejam [here]().*
+*You can read a Changelog with all the summarized changes made during the Gamejam [here](CHANGELOG.md).*
 
 ## Getting Started
 
