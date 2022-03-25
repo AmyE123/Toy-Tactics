@@ -25,3 +25,11 @@ Here is how you can get the game running for development and testing purposes.
 * Navigate to the directory where the project was downloaded
 * Open with the specified Unity version
 ```
+
+## Built With
+* [Unity]() - The game engine used
+* [Visual Studio Code]() - The IDE used
+
+## Authors
+* **Amy Elliott** - Development
+* **Joe Shanahan** - Initial Gamejam Development
