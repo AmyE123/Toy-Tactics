@@ -50,7 +50,24 @@
 * Changed (Joe) - Made the go button less ugly
 * Added (Joe) - Win screen lets you pick the next level
 * Added (Joe) - Working settings menu
-
+* Added (Joe) - Sound effects respect sound volume
+* Added (Joe) - Enforced team order
+* Added (Joe) - TutorialScene 1 done
+* Added (Amy) - Some level additions
+* Added (Joe) - Added tutorial 2 and made a start to tutorial 3
+* Added (Amy) - AI settings updated
+* Added (Amy) - Tutorial 3 made
+* Added (Joe) - Working teams menu
+* Added (Joe) - Way to go back to the main menu
+* Added (Joe) - Now says CPU turn when CPU turn
+* Changed (Amy) - Rename level
+* Added (Joe) - Random animation on the home screen
+* Changed (Joe) - Got rid of incorrect tutorial message
+* Added (Joe) - Lockstate on titlescreen level select
+* Added (Joe) - Stopped the level list getting overwritten by save data
+* Changed (Joe) - Small level fixes
+* Changed (Amy) - Updated some levels
+* Added (Joe) - Added rigidbodies to level 3
 
 [0.0.3] 03-10-2021
 * Added (Amy) - Team data
