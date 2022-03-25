@@ -4,10 +4,10 @@
 * Removed - For now removed features
 * Deprecated - For soon to be removed features
 
-[Postjam Refactoring]
+#[Postjam Refactoring]
 
-----
-[Gamejam]
+---
+#[Gamejam]
 
 [0.0.5] 05-10-2021
 * Changed (Joe) - Updated settings to enable/disable postjam content, general postjam additions
