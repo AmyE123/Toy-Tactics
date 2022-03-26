@@ -7,6 +7,7 @@ You're a toy soldier, and you have to defeat the enemy soldiers! Navigate throug
    <sup><i>This game was designed around the theme <i>Unstable</i> for <a href="https://ldjam.com/events/ludum-dare/49/toy-tactics">Ludum Dare 49</a>.</i></sup>
 </p>
 
+## Table of Contents
 1. [Additional Information](#additional-information)
 2. [Getting Started](#getting-started)
     * [Prerequisites](#prerequisites)
