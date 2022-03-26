@@ -28,8 +28,6 @@ These instructions will get you a copy of this game project up and running on yo
 If you just want to play the game, you can play on a web browser or download it for Windows on the [Toy Tactics Itch.io Page](https://horsehead.itch.io/toy-tactics)
 
 ### Prerequisites
-You will need:
-
 [![Unity Version: 2020.3.19f1](https://img.shields.io/badge/Unity-2020.3.19f1-333333.svg?logo=unity)](https://unity3d.com/get-unity/download/archive)
 
 ### Installing
