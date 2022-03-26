@@ -25,16 +25,15 @@ If you just want to play the game, you can play on a web browser or download it 
 
 ### Prerequisites
 You will need:
-```
-Unity Version X
-```
+
+[![Unity Version: 2020.3.19f1](https://img.shields.io/badge/Unity-2020.3.19f1-333333.svg?logo=unity)](https://unity3d.com/get-unity/download/archive)
 
 ### Installing
 Here is how you can get the game running for development and testing purposes:
 ```
 1. Download the project 
 2. Launch Unity Hub
-3. Press 'Add Project' on the top right corner of the hub
+3. Press 'Add' on the top right corner of the hub
 4. Navigate to the directory where the project was downloaded
 5. Open with the specified Unity version
 ```
