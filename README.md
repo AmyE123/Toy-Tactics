@@ -4,6 +4,13 @@ You're a toy soldier, and you have to defeat the enemy soldiers! Navigate throug
 
 This game was designed around the theme **Unstable** for [Ludum Dare 49](https://ldjam.com/events/ludum-dare/49/toy-tactics).
 
+1. [Additional Information](#additional-information)
+2. [Getting Started](#getting-started)
+    * [Prerequisites](#prerequisites)
+    * [Installing](#installing)
+3. [Built With](#built-with)
+4. [Authors](#authors)
+
 ## Additional Information
 As this game started as a Gamejam project which me and Joe worked on, I decided it might be nice to spend some time refactoring the project as I've learnt lots over these past few months working in the Games Industry!
 
@@ -38,4 +45,4 @@ Here is how you can get the game running for development and testing purposes:
 
 ## Authors
 * **Amy Elliott** - *Initial Gamejam Development & Refactoring* 
-* **Joe Shanahan** - *Initial Gamejam Development* - [Portfolio]()
+* **Joe Shanahan** - *Initial Gamejam Development* - [Portfolio](https://www.3djoe.co.uk/) 
