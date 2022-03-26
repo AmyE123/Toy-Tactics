@@ -1325,7 +1325,7 @@ GameObject:
   - component: {fileID: 127476834}
   - component: {fileID: 127476837}
   m_Layer: 5
-  m_Name: RedTeam
+  m_Name: GreenTeam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1732,8 +1732,8 @@ GameObject:
   - component: {fileID: 178952530}
   - component: {fileID: 178952532}
   - component: {fileID: 178952531}
-  - component: {fileID: 178952533}
   - component: {fileID: 178952534}
+  - component: {fileID: 178952533}
   m_Layer: 5
   m_Name: Pane
   m_TagString: Untagged
@@ -1811,7 +1811,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 178952529}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 024172a4eb400f34a8354318c8a092d8, type: 3}
+  m_Script: {fileID: 11500000, guid: d2328f559ef642042a493657b23045e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _quitButton: {fileID: 2083716873}
@@ -6462,7 +6462,7 @@ GameObject:
   - component: {fileID: 583314228}
   - component: {fileID: 583314227}
   m_Layer: 5
-  m_Name: RedTeam (1)
+  m_Name: RedTeam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13546,7 +13546,7 @@ GameObject:
   - component: {fileID: 858153606}
   - component: {fileID: 858153605}
   m_Layer: 5
-  m_Name: RedTeam (2)
+  m_Name: BlueTeam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26751,7 +26751,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2022240044}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4d49a8f616cbb64b820567be7225a59, type: 3}
+  m_Script: {fileID: 11500000, guid: 14c5a3589d291004898838c5246c440c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _settings: {fileID: 11400000, guid: f3b683e572d987a4a89ba8def5fbecf9, type: 2}
