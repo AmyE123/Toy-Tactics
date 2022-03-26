@@ -2,9 +2,9 @@
 
 All notable changes to the project will be documented in this file.
 
-[Refactoring]()
 
-[Gamejam]()
+1. [Refactoring](#refactoring) - For all refactoring done
+2. [Gamejam](#gamejam) - The notable changes made during the Gamejam
 
 # Key
 
