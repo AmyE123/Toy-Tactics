@@ -2,7 +2,10 @@
 
 You're a toy soldier, and you have to defeat the enemy soldiers! Navigate through the the unstable environment to battle against the AI Controlled enemy teams!
 
-This game was designed around the theme **Unstable** for [Ludum Dare 49](https://ldjam.com/events/ludum-dare/49/toy-tactics).
+<p align="center">
+  <img src="Github/Assets/screenshot_1.jpg" alt="Toy Tactics Gameplay Screenshot" style="width:100%"/>
+   <sup><i>This game was designed around the theme <i>Unstable</i> for <a href="https://ldjam.com/events/ludum-dare/49/toy-tactics">Ludum Dare 49</a>.</i></sup>
+</p>
 
 1. [Additional Information](#additional-information)
 2. [Getting Started](#getting-started)
