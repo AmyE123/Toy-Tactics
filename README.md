@@ -41,8 +41,8 @@ Here is how you can get the game running for development and testing purposes:
 ```
 
 ## Built With
-* [Unity]() - The game engine used
-* [Visual Studio Code]() - The IDE used
+* [Unity](https://unity3d.com/get-unity/download/archive) - The game engine used
+* [Visual Studio Code](https://code.visualstudio.com/) - The IDE used
 
 ## Authors
 * **Amy Elliott** - *Initial Gamejam Development & Refactoring* 
