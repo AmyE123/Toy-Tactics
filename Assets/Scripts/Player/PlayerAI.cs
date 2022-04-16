@@ -36,8 +36,6 @@ public class PlayerAI : MonoBehaviour
 
     IEnumerator PickTargetRoutine()
     {
-        Debug.Log("Picking a target!");
-
         yield return new WaitForSeconds(_startWaitTime);
 
         //find closest weakest player
@@ -58,8 +56,6 @@ public class PlayerAI : MonoBehaviour
 
     IEnumerator GoToTargetRoutine()
     {
-        Debug.Log("Going to target!");
-
         while (true)
         {
             bool reachedTarget = RunToTargetPosition();
@@ -80,7 +76,6 @@ public class PlayerAI : MonoBehaviour
 
     IEnumerator ChooseWeaponRoutine()
     {
-        Debug.Log("Choosing a weapon!");
         int randomNum = Random.Range(0, 3);
 
         if (randomNum == 2)
@@ -95,7 +90,6 @@ public class PlayerAI : MonoBehaviour
         // If we didn't find a weapon, give up
         if (_chosenWeapon == null)
         {
-            Debug.Log("Couldn't find any weapons! :(");
             EndMyTurn();
             yield break;
         }
@@ -107,8 +101,6 @@ public class PlayerAI : MonoBehaviour
 
     IEnumerator AimWeaponRoutine()
     {
-        Debug.Log("Aiming the weapon!");
-
         while (true)
         {
             bool lockedOn = _player.Cameras.AimFirstPersonCamera(_targetPlayer.transform.position);
@@ -129,8 +121,6 @@ public class PlayerAI : MonoBehaviour
 
     IEnumerator ShootWeaponRoutine()
     {
-        Debug.Log("Shooting the weapon!");
-        
         _player.Equipment.UseEquippedWeapon();
         
         StartCoroutine(EndTurnFailsafe());
@@ -143,7 +133,6 @@ public class PlayerAI : MonoBehaviour
 
         if (_player.Status != Player.PlayerStatus.Idle)
         {
-            Debug.LogWarning("The AI turn didn't end, so the failsafe kicked in");
             EndMyTurn();
         }
     }

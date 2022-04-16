@@ -128,8 +128,6 @@ public class MatchController : MonoBehaviour
                 remainingTeams ++;
         }
 
-        Debug.Log($"There are {remainingTeams} teams left");
-
         if (remainingTeams == 1)
         {
             _state = MatchState.TeamWon;
