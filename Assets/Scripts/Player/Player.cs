@@ -112,11 +112,6 @@ public class Player : MonoBehaviour
             _humanInput.DoUpdate();
             _equipment.PlayerInput();
         }
-        else if (_status == PlayerStatus.ComputerControlled)
-        {
-            // Done by coroutines now
-            // _ai.DoUpdate();
-        }
 
         if (playerHealth > 0 && transform.position.y < -10)
         {
@@ -260,14 +255,7 @@ public class Player : MonoBehaviour
         gameObject.SetActive(false);
 
         if (_status != PlayerStatus.Idle)
-            FindObjectOfType<PlayerOrganiser>().FinishTurnIfActivePlayer(this, 2.5f);
-
-        //Run delegate function to run these things:
-            //Player Death
-                //Player fall over
-                //Death Particles
-                //Update Player/Enemy Head Count 
-                //Some UI thing to tell how many players left               
+            FindObjectOfType<PlayerOrganiser>().FinishTurnIfActivePlayer(this, 2.5f);            
     }
 
     public void DoExplosiveDamage(Vector3 position, float radius, float force, float damageMultiplier=1)

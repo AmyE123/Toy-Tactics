@@ -77,13 +77,6 @@ public class WinUI : MonoBehaviour
         _grp.DOFade(1, 0.8f).SetEase(Ease.OutExpo);
 
         _buttonGroup.alpha = 0;
-        // GraphicAlphaZero(_gameOverText);
-        // GraphicAlphaZero(_mapNameText);
-        // GraphicAlphaZero(_teamNameText);
-
-        // _gameOverText.DOFade(1, 0.7f).SetEase(Ease.OutExpo).SetDelay(0.5f);
-        // _mapNameText.DOFade(0.5f, 0.7f).SetEase(Ease.OutExpo).SetDelay(0.7f);
-        // _teamNameText.DOFade(1, 0.7f).SetEase(Ease.OutExpo).SetDelay(1f);
         _buttonGroup.DOFade(1, 0.7f).SetEase(Ease.OutExpo).SetDelay(1f);
     }
 

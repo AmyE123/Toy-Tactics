@@ -35,8 +35,6 @@ public class ThirdPersonCamera : MonoBehaviour
         float rotX = Input.GetAxis("Mouse X") * _settings.mouseSensitivity;
         float rotY = Input.GetAxis("Mouse Y") * _settings.mouseSensitivity;
 
-        // Cursor.lockState = CursorLockMode.Locked;
-
         if (_settings.invertX)
             rotX = -rotX;
 

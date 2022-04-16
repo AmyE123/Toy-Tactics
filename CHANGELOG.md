@@ -25,6 +25,8 @@ All notable changes to the project will be documented in this file.
 ## [0.0.6] 2022-04-16 > 2022-05-01
 * Fixed - Missing references, project & code cleanup
 * Changed - Upgraded Visual Studio package
+* Fixed - Disabled button interaction upon click on Win UI
+* Changed - Cleaned up commented out code
 
 ---
 # Gamejam
