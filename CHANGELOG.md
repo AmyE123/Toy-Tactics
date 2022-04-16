@@ -22,6 +22,10 @@ All notable changes to the project will be documented in this file.
 
 # Refactoring
 
+## [0.0.6] 2022-04-16 > 2022-05-01
+* Fixed - Missing references, project & code cleanup
+* Changed - Upgraded Visual Studio package
+
 ---
 # Gamejam
 
