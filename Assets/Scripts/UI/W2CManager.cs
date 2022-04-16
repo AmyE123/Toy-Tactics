@@ -33,7 +33,6 @@ using UnityEngine;
             // Check we've set up the singleton first
             if (_instance == null)
             {
-                Debug.LogError("W2CManager cannot instantiate because it doesn't yet exist in the scene!");
                 return null;
             }
 
@@ -45,7 +44,6 @@ using UnityEngine;
             if (comp == null)
             {
                 Destroy(spawnedObj);
-                Debug.LogError("W2CManager instantiated an object that doesnt have a W2C component on it!");
                 return null;
             }
 

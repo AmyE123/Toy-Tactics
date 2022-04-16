@@ -9,8 +9,7 @@ public class HeavyBoots : EquipableItem
     [SerializeField] AudioClip _equipSound;
 
     bool _hasBeenUsed;
-    bool _isActive;
-    
+   
     public override void StartUse()
     {
         base.StartUse();
@@ -18,7 +17,6 @@ public class HeavyBoots : EquipableItem
         if (_hasBeenUsed)
             return;
 
-        _isActive = true;
         _hasBeenUsed = true;
         _player.SetBootsActive(_mass, _gravityMultiplier);
         SoundManager.Instance.PlaySoundWithRandomPitch(_equipSound, _player.transform.position, 1.8f, 0.9f, 1.1f);
@@ -26,7 +24,6 @@ public class HeavyBoots : EquipableItem
 
     public void FinishUse()
     {
-        _isActive = false;
         _player.SetBootsInactive();
     }
 

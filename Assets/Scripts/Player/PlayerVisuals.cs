@@ -75,7 +75,6 @@ public class PlayerVisuals : MonoBehaviour
     {
         if (teamData == null)
         {
-            Debug.LogError("There's a solider without a team!");
             return;
         }
 
