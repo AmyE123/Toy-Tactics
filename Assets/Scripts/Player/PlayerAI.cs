@@ -12,12 +12,10 @@ public class PlayerAI : MonoBehaviour
     [Header("Timings")]
     [SerializeField] float _startWaitTime = 2;
     [SerializeField] float _lockOnTime = 0.5f;
-    [SerializeField] float _giveUpRunningTime = 10;
 
     float currentRunTime;
     float currentLockOnTime;
     float randomRangeGen;
-    bool hastakenMove;
 
     Vector3 _targetPosition;
     Player _targetPlayer;
@@ -134,7 +132,6 @@ public class PlayerAI : MonoBehaviour
         Debug.Log("Shooting the weapon!");
         
         _player.Equipment.UseEquippedWeapon();
-        hastakenMove = true;
         
         StartCoroutine(EndTurnFailsafe());
         yield break;

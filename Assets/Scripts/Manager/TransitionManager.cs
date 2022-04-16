@@ -14,8 +14,6 @@ public class TransitionManager : MonoBehaviour
     [SerializeField] private float _transitionTime;
     [SerializeField] private GameSettings _settings;
 
-    bool _isBusy = false;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -59,7 +57,6 @@ public class TransitionManager : MonoBehaviour
     private void StartTransition(string sceneName)
     {
         Cursor.lockState = CursorLockMode.None;
-        _isBusy = true;
         _topImage.DOFillAmount(1, _transitionTime).SetEase(Ease.Linear).OnComplete(() => LoadScene(sceneName));
         _bottomImage.DOFillAmount(1, _transitionTime).SetEase(Ease.Linear);
     }
@@ -69,7 +66,6 @@ public class TransitionManager : MonoBehaviour
         SceneManager.LoadScene(sceneName);
         _bottomImage.DOFillAmount(0, _transitionTime).SetEase(Ease.Linear).SetDelay(0.15f);
         _topImage.DOFillAmount(0, _transitionTime).SetEase(Ease.Linear).SetDelay(0.15f);
-        _isBusy = false;
         Cursor.lockState = CursorLockMode.None;
     }
 }
