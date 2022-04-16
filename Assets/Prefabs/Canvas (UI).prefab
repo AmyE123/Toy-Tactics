@@ -5200,6 +5200,10 @@ MonoBehaviour:
   _teamNameText: {fileID: 1588570138983687705}
   _buttonGroup: {fileID: 8581070280608449840}
   _settings: {fileID: 11400000, guid: f3b683e572d987a4a89ba8def5fbecf9, type: 2}
+  _gameOverButtons:
+  - {fileID: 1808820197472071169}
+  - {fileID: 6645449095730848493}
+  - {fileID: 482166016083140747}
 --- !u!1 &7116131547089960098
 GameObject:
   m_ObjectHideFlags: 0

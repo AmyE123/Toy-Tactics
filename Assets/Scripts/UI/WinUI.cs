@@ -14,9 +14,15 @@ public class WinUI : MonoBehaviour
     [SerializeField] Text _teamNameText;
     [SerializeField] CanvasGroup _buttonGroup;
     [SerializeField] GameSettings _settings;
-    
-    public void ShowDraw(int roundNum)
+    [SerializeField] Button[] _gameOverButtons;
+
+    public void Start()
     {
+        SetButtonsInteractable(false);
+    }
+
+    public void ShowDraw(int roundNum)
+    {       
         _gameOverText.text = "EVERYONE LOSES";
         _teamNameText.text = "DRAW";
         string mapName = _settings.GetCurrentLevel().levelName.ToUpper();
@@ -62,6 +68,8 @@ public class WinUI : MonoBehaviour
 
     void ShowAnimation()
     {
+        SetButtonsInteractable(true);
+
         _grp.alpha = 0;
         _rect.localScale = new Vector3(0.9f, 0.0f, 0.9f);
 
@@ -79,18 +87,29 @@ public class WinUI : MonoBehaviour
         _buttonGroup.DOFade(1, 0.7f).SetEase(Ease.OutExpo).SetDelay(1f);
     }
 
+    private void SetButtonsInteractable(bool state)
+    {
+        foreach (Button btn in _gameOverButtons)
+        {
+            btn.interactable = state;
+        }
+    }
+
     public void BtnPressMenu()
     {
         TransitionManager.GoToMenu();
+        SetButtonsInteractable(false);
     }
 
     public void BtnPressAgain()
     {
         TransitionManager.GoToGame();
+        SetButtonsInteractable(false);
     }
 
     public void BtnPressNext()
     {
         TransitionManager.GoToNextMap();
+        SetButtonsInteractable(false);
     }
 }
