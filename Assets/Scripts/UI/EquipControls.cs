@@ -41,8 +41,6 @@ public class EquipControls : MonoBehaviour
             _itemName.text = $"{data.displayName} ({uses} uses left)";
         }
 
-        // _explaination.text = "LMB to use";
-
         if (data.willEndTurn)
         {
             _willEndTurn.text = "(this will end your turn)";

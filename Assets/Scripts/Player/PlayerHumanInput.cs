@@ -43,8 +43,6 @@ public class PlayerHumanInput : MonoBehaviour
             _player.Movement.jump.isRequested = false;
         }
 
-        // Cursor.lockState = CursorLockMode.Locked;
-
         float rotX = Input.GetAxis("Mouse X") * _settings.mouseSensitivity;
         float rotY = Input.GetAxis("Mouse Y") * _settings.mouseSensitivity;
 
