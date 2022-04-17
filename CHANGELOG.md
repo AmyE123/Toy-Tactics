@@ -27,6 +27,7 @@ All notable changes to the project will be documented in this file.
 * Changed - Upgraded Visual Studio package
 * Fixed - Disabled button interaction upon click on Win UI
 * Changed - Cleaned up commented out code
+* Fixed - Weapon references fixed after project cleanup
 
 ---
 # Gamejam

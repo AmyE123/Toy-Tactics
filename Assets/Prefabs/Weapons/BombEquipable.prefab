@@ -242,7 +242,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8921196787930073077}
-  - component: {fileID: 4992792328715317592}
+  - component: {fileID: 6893251110042266973}
   m_Layer: 0
   m_Name: BombEquipable
   m_TagString: Untagged
@@ -267,7 +267,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4992792328715317592
+--- !u!114 &6893251110042266973
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -276,12 +276,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7839195881256745312}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cade16659b0c0b4c8c37326aa7f7568, type: 3}
+  m_Script: {fileID: 11500000, guid: 35a206f83b77e5e41bc7c9feff227aab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _data: {fileID: 11400000, guid: 54f0a096eaebe9b46999b916eb4d8b30, type: 2}
   isFirstPerson: 1
-  isTurnEnder: 1
   _trajectoryLine: {fileID: 814453794403874790}
   _throwVelocity: 16
   _throwPoint: {fileID: 2918145422346592798}

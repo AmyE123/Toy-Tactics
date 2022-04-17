@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4851993706059552106}
   - component: {fileID: 4851993706059552107}
   - component: {fileID: 4851993706059552104}
-  - component: {fileID: 4851993706059552105}
+  - component: {fileID: 753602100879534769}
   m_Layer: 0
   m_Name: Bomb
   m_TagString: Untagged
@@ -113,7 +113,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &4851993706059552105
+--- !u!114 &753602100879534769
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4851993706059552102}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40f34c899fa616d4ba4a1b963de5163c, type: 3}
+  m_Script: {fileID: 11500000, guid: ed804dad1f2365f4ba11c78747e9ee33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _radius: 8
