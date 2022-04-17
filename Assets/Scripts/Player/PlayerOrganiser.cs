@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class PlayerOrganiser : MonoBehaviour
 {
+    const float TURN_SKIP_COOLDOWN_COUNT = 5f;
+
     private List<Player> _players;
+
+    private bool _turnSkipCooldown = false;
 
     [SerializeField]
     private UIManager _uiManager;
@@ -23,8 +27,17 @@ public class PlayerOrganiser : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_activePlayer != null && _activePlayer.Team.isComputerControlled == false && Input.GetKeyDown(KeyCode.T))
+        if (_activePlayer != null && _activePlayer.Team.isComputerControlled == false && Input.GetKeyDown(KeyCode.T) && _turnSkipCooldown == false)
+        {
             FinishTurnForActivePlayer();
+            Invoke("TurnSkipCooldownReset", TURN_SKIP_COOLDOWN_COUNT);
+            _turnSkipCooldown = true;
+        }           
+    }
+
+    void TurnSkipCooldownReset()
+    {
+        _turnSkipCooldown = false;
     }
 
     public void SelectPlayer(Player player)
