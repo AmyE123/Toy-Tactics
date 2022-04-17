@@ -28,6 +28,7 @@ All notable changes to the project will be documented in this file.
 * Fixed - Disabled button interaction upon click on Win UI
 * Changed - Cleaned up commented out code
 * Fixed - Weapon references fixed after project cleanup
+* Fixed - Spam end turn to skip enemy turn by adding a cooldown on end turn button press
 
 ---
 # Gamejam
