@@ -62,6 +62,7 @@ public class PlayerHumanInput : MonoBehaviour
 
         float currentY = _player.Cameras.firstPersonCam.transform.localEulerAngles.x;
 
+        //TODO: MAGIC NUMBERS
         if (currentY > 180)
             currentY -= 360;
 
@@ -94,6 +95,7 @@ public class PlayerHumanInput : MonoBehaviour
         if (_player.Movement.jetpackActive)
             _player.Movement.jump.isRequested = false;
 
+        //TODO: MAGIC NUMBERS
         if (_player.Movement.move.desiredVelocity.magnitude > 0.25f)
         {
             bool isJetpacking = _player.Movement.jetpackActive && _player.Movement.IsGrounded == false;

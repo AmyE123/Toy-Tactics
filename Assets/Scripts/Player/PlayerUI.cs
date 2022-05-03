@@ -43,6 +43,7 @@ public class PlayerUI : W2C
         _healthBarImage.fillAmount = hpPercent;
         _healthText.text = currentHP.ToString();
 
+        //TODO: MAGIC NUMBER
         if (currentHP == 0 && _canvasGroup.alpha > 0)
             _canvasGroup.DOFade(0, 0.8f).SetEase(Ease.Linear).SetDelay(3);
     }
@@ -54,6 +55,7 @@ public class PlayerUI : W2C
 
     public void HideButton()
     {
+        //TODO: MAGIC NUMBER
         _goButtonRect.DOScale(0, 0.5f).SetEase(Ease.InElastic).OnComplete(() => _goButtonRect.gameObject.SetActive(false));
         _goButtonRect.gameObject.SetActive(false);
     }
@@ -62,6 +64,8 @@ public class PlayerUI : W2C
     {
         _goButtonRect.localScale = Vector3.zero;
         _goButtonRect.gameObject.SetActive(true);
+
+        //TODO: MAGIC NUMBER
         _goButtonRect.DOScale(1, 0.5f).SetEase(Ease.OutElastic);
 
     }

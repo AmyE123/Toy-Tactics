@@ -38,6 +38,7 @@ public class PlayerVisuals : MonoBehaviour
 
         if(_player.Cameras.IsFirstPerson)
         {
+            //TODO: MAGIC NUMBER
             materialAlpha = Mathf.Lerp(materialAlpha, _firstPersonAlpha, 2f * Time.deltaTime);    
             if(_player.Status == Player.PlayerStatus.Idle)
             {
@@ -46,6 +47,7 @@ public class PlayerVisuals : MonoBehaviour
         }
         else
         {
+            //TODO: MAGIC NUMBER
             materialAlpha = Mathf.Lerp(materialAlpha, 1, 5f * Time.deltaTime);
         }
     }

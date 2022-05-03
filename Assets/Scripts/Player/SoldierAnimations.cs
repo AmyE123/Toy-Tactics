@@ -24,6 +24,7 @@ public class SoldierAnimations : MonoBehaviour
 
     public void SetAsRunning()
     {
+        //TODO: MAGIC NUMBER
         _runTime = 0.1f;
     }
 
@@ -46,6 +47,7 @@ public class SoldierAnimations : MonoBehaviour
     {
         _anim.SetBool(IS_STATIC, true);
 
+        //TODO: MAGIC NUMBERS
         int randChoice = Random.Range(0, 4);
         _anim.SetFloat(END_CHOICE, ((float) randChoice) / 3f );
     }

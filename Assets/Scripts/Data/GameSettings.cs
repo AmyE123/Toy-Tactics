@@ -7,6 +7,8 @@ public class GameSettings : ScriptableObject
 {
     public bool invertX;
     public bool invertY;
+
+    //TODO: Should this be a 'default' const?
     public float mouseSensitivity = 5;
 
     public float musicVolume;

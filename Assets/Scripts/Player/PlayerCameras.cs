@@ -51,6 +51,7 @@ public class PlayerCameras : MonoBehaviour
 
     public bool AimFirstPersonCamera(Vector3 aimTarget)
     {
+        //TODO: MAGIC NUMBERS
         Vector3 vectorToTarget = aimTarget - transform.position;
         vectorToTarget.Normalize();
 

@@ -10,6 +10,7 @@ public class PlayerMove : MonoBehaviour
     [System.Serializable]
     public class JumpInfo
     {
+        //TODO: Should these be a 'default' const?
         [Range(0f, 10f)] public float height = 2f;
         [Range(0f, 10f)] public float wallJumpPower = 2f;
         [Range(0f, 5f)] public int maxAirJumps = 0;
@@ -19,12 +20,14 @@ public class PlayerMove : MonoBehaviour
         [HideInInspector] public int stepsSinceLastJump;
         [HideInInspector] public bool isRequested;
 
+        //TODO: MAGIC NUMBER
         public float Speed => Mathf.Sqrt(-2f * Physics.gravity.y * height);
     }
 
     [System.Serializable]
     public class GroundInfo
     {
+        //TODO: Should these be a 'default' const?
         [Range(0f, 90f)] public float maxSlopeAngle = 25f;
         [Range(0f, 100f)] public float maxSnapSpeed = 100f;
 	    [Min(0f)] public float probeDistance = 1f;
@@ -43,6 +46,7 @@ public class PlayerMove : MonoBehaviour
     [System.Serializable]
     public class MoveInfo
     {
+        //TODO: Should these be a 'default' const?
         [Range(0f, 100f)] public float maxAcceleration = 10f;
         [Range(0f, 100f)] public float maxAirAcceleration = 1f;
         [Range(0f, 100f)] public float maxSpeed = 10f;
@@ -202,6 +206,7 @@ public class PlayerMove : MonoBehaviour
 
 		if (IsGrounded || SnapToGround() || CheckSteepContacts()) 
         {
+            //TODO: MAGIC NUMBER
             if (jump.stepsSinceLastJump > 2)
             {
                 _anims.StopJumping();
@@ -261,6 +266,7 @@ public class PlayerMove : MonoBehaviour
 				ground.groundContactCount += 1;
 				ground.contactNormal += normal;
 			}
+            //TODO: MAGIC NUMBERS
             else if (normal.y > -0.01f && normal.y < 0.05f) 
             {
 				ground.wallContactCount += 1;

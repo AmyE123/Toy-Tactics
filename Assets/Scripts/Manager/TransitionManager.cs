@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class TransitionManager : MonoBehaviour
 {
+    const float LOAD_SCENE_DELAY = 0.15f;
+
     private static TransitionManager _instance;
 
     [SerializeField] private Image _topImage;
@@ -64,8 +66,8 @@ public class TransitionManager : MonoBehaviour
     private void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
-        _bottomImage.DOFillAmount(0, _transitionTime).SetEase(Ease.Linear).SetDelay(0.15f);
-        _topImage.DOFillAmount(0, _transitionTime).SetEase(Ease.Linear).SetDelay(0.15f);
+        _bottomImage.DOFillAmount(0, _transitionTime).SetEase(Ease.Linear).SetDelay(LOAD_SCENE_DELAY);
+        _topImage.DOFillAmount(0, _transitionTime).SetEase(Ease.Linear).SetDelay(LOAD_SCENE_DELAY);
         Cursor.lockState = CursorLockMode.None;
     }
 }

@@ -113,6 +113,7 @@ public class Player : MonoBehaviour
             _equipment.PlayerInput();
         }
 
+        //TODO: MAGIC NUMBER
         if (playerHealth > 0 && transform.position.y < -10)
         {
             W2CManager.DoDamageBurst(playerHealth, this, transform.position);
@@ -135,6 +136,7 @@ public class Player : MonoBehaviour
 
     void LockPodiumPosition()
     {
+        //TODO: MAGIC NUMBER
         _podium.transform.position = transform.position - (transform.up * 0.8f);
         _podium.transform.rotation = transform.rotation;
     }
@@ -194,6 +196,7 @@ public class Player : MonoBehaviour
 
         if (Status == PlayerStatus.Idle)
         {
+            //TODO: MAGIC NUMBER
             transform.position += new Vector3(0, 0.1f, 0);
             _podium.gameObject.SetActive(true);
             LockPodiumPosition();
@@ -254,6 +257,7 @@ public class Player : MonoBehaviour
     {
         gameObject.SetActive(false);
 
+        //TODO: MAGIC NUMBER
         if (_status != PlayerStatus.Idle)
             FindObjectOfType<PlayerOrganiser>().FinishTurnIfActivePlayer(this, 2.5f);            
     }
@@ -263,6 +267,7 @@ public class Player : MonoBehaviour
         float distance = Vector3.Distance(transform.position, position);
         float distancePercent = Mathf.Sqrt(Mathf.Clamp01(distance / radius));
 
+        //TODO: MAGIC NUMBER
         // Standing right next to it does 650, so this should be about 92 at point blank
         float damageVal = ((1 - distancePercent) * force) / 7;
         W2CManager.DoDamageBurst((int) damageVal, this, transform.position);

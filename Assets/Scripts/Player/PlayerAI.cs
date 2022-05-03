@@ -8,7 +8,7 @@ public class PlayerAI : MonoBehaviour
     [SerializeField] private PlayerMove _move;
     [SerializeField] private WeaponData _chosenWeapon;
 
-
+    //TODO: Should this be a 'default' const?
     [Header("Timings")]
     [SerializeField] float _startWaitTime = 2;
     [SerializeField] float _lockOnTime = 0.5f;
@@ -50,6 +50,8 @@ public class PlayerAI : MonoBehaviour
         }
 
         _targetPosition = _targetPlayer.transform.position;
+
+        //TODO: MAGIC NUMBERS
         randomRangeGen = Random.Range(5f, 13f);
         StartCoroutine(GoToTargetRoutine());
     }
@@ -76,6 +78,7 @@ public class PlayerAI : MonoBehaviour
 
     IEnumerator ChooseWeaponRoutine()
     {
+        //TODO: MAGIC NUMBERS
         int randomNum = Random.Range(0, 3);
 
         if (randomNum == 2)
@@ -129,6 +132,7 @@ public class PlayerAI : MonoBehaviour
 
     IEnumerator EndTurnFailsafe()
     {
+        //TODO: MAGIC NUMBERS
         yield return new WaitForSeconds(8);
 
         if (_player.Status != Player.PlayerStatus.Idle)
@@ -139,6 +143,7 @@ public class PlayerAI : MonoBehaviour
 
     Player FindClosestPlayer()
     {
+        //TODO: MAGIC NUMBERS
         Player closest = null;
         float closestDist = 99999;
 
@@ -162,6 +167,7 @@ public class PlayerAI : MonoBehaviour
 
     Player FindClosestWeakTeamPlayer()
     {
+        //TODO: MAGIC NUMBERS
         Player closest = null;
         float closestDist = 99999;
 
@@ -214,7 +220,8 @@ public class PlayerAI : MonoBehaviour
         
         currentRunTime += Time.deltaTime;
 
-        if(rangeToPlayer <= randomRangeGen || currentRunTime > 10)
+        //TODO: MAGIC NUMBERS
+        if (rangeToPlayer <= randomRangeGen || currentRunTime > 10)
         {
             return true;
         }
@@ -224,6 +231,7 @@ public class PlayerAI : MonoBehaviour
 
     void CheckIfCanJump()
     {
+        //TODO: MAGIC NUMBERS
         RaycastHit lowHit;
         RaycastHit highHit;
 

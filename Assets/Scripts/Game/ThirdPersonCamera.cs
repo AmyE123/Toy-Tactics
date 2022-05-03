@@ -43,10 +43,13 @@ public class ThirdPersonCamera : MonoBehaviour
 
         float currentUpDown = transform.localEulerAngles.x;
 
+        //TODO: MAGIC NUMBER (not 100% sure though)
         if (currentUpDown > 180)
             currentUpDown -= 360;
 
         float newLeftRight = transform.localEulerAngles.y + rotX;
+
+        //TODO: MAGIC NUMBER (not 100% sure though)
         float newUpDown = Mathf.Clamp(currentUpDown - rotY, -90, 90);
 
         transform.localEulerAngles = new Vector3(newUpDown, newLeftRight, 0);
@@ -59,6 +62,7 @@ public class ThirdPersonCamera : MonoBehaviour
         Vector3 dirToCam = (_camTransform.position - _objectToFollow.transform.position).normalized;
         if (Physics.Raycast(_objectToFollow.transform.position, dirToCam, out RaycastHit hit, _camDistance, _everythingButPlayer))
         {
+            //TODO: MAGIC NUMBER 
             targetPos = new Vector3(0, _camHeight, 0.1f-hit.distance);
         }
 
