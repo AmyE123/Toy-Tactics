@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class PlayerAI : MonoBehaviour
 {
+    private const float END_TURN_FAILSAFE_DELAY = 8f;
+
     [SerializeField] private Player _player;
     [SerializeField] private PlayerMove _move;
     [SerializeField] private WeaponData _chosenWeapon;
 
-    //TODO: Should this be a 'default' const?
+    [Header("Values")]
+    [SerializeField] private int _aiTargetRangeMin = 5;
+    [SerializeField] private int _aiTargetRangeMax = 13;
+    [SerializeField] private float _aiMinRunTime = 10f;
+
     [Header("Timings")]
     [SerializeField] float _startWaitTime = 2;
     [SerializeField] float _lockOnTime = 0.5f;
@@ -51,8 +57,7 @@ public class PlayerAI : MonoBehaviour
 
         _targetPosition = _targetPlayer.transform.position;
 
-        //TODO: MAGIC NUMBERS
-        randomRangeGen = Random.Range(5f, 13f);
+        randomRangeGen = Random.Range(_aiTargetRangeMin, _aiTargetRangeMax);
         StartCoroutine(GoToTargetRoutine());
     }
 
@@ -78,7 +83,7 @@ public class PlayerAI : MonoBehaviour
 
     IEnumerator ChooseWeaponRoutine()
     {
-        //TODO: MAGIC NUMBERS
+        //TODO: Write this better
         int randomNum = Random.Range(0, 3);
 
         if (randomNum == 2)
@@ -132,8 +137,7 @@ public class PlayerAI : MonoBehaviour
 
     IEnumerator EndTurnFailsafe()
     {
-        //TODO: MAGIC NUMBERS
-        yield return new WaitForSeconds(8);
+        yield return new WaitForSeconds(END_TURN_FAILSAFE_DELAY);
 
         if (_player.Status != Player.PlayerStatus.Idle)
         {
@@ -143,7 +147,6 @@ public class PlayerAI : MonoBehaviour
 
     Player FindClosestPlayer()
     {
-        //TODO: MAGIC NUMBERS
         Player closest = null;
         float closestDist = 99999;
 
@@ -220,8 +223,7 @@ public class PlayerAI : MonoBehaviour
         
         currentRunTime += Time.deltaTime;
 
-        //TODO: MAGIC NUMBERS
-        if (rangeToPlayer <= randomRangeGen || currentRunTime > 10)
+        if (rangeToPlayer <= randomRangeGen || currentRunTime > _aiMinRunTime)
         {
             return true;
         }

@@ -5,8 +5,11 @@ using Cinemachine;
 
 public class Player : MonoBehaviour
 {
-    public enum PlayerStatus { Idle, PlayerControlled, ComputerControlled }
+    private const int DEATH_PIT_HEIGHT = -10;
+    private const float PODIUM_HEIGHT = 0.8f;
+    private const float PLAYER_IDLE_Y = 0.1f;
 
+    public enum PlayerStatus { Idle, PlayerControlled, ComputerControlled }
 
     [Header("Subcomponents")]
     [SerializeField] private PlayerMove _movement;
@@ -27,6 +30,9 @@ public class Player : MonoBehaviour
 
     [SerializeField]
     private Rigidbody _rigidBody;
+
+    [Header("Player Values")]
+    [SerializeField] private float _delayAfterTurn = 2.5f;
 
     [Header("Health Properties")]   
     [SerializeField] GameObject playerUIPrefab; 
@@ -113,8 +119,7 @@ public class Player : MonoBehaviour
             _equipment.PlayerInput();
         }
 
-        //TODO: MAGIC NUMBER
-        if (playerHealth > 0 && transform.position.y < -10)
+        if (playerHealth > 0 && transform.position.y < DEATH_PIT_HEIGHT)
         {
             W2CManager.DoDamageBurst(playerHealth, this, transform.position);
             playerHealth = 0;
@@ -136,8 +141,7 @@ public class Player : MonoBehaviour
 
     void LockPodiumPosition()
     {
-        //TODO: MAGIC NUMBER
-        _podium.transform.position = transform.position - (transform.up * 0.8f);
+        _podium.transform.position = transform.position - (transform.up * PODIUM_HEIGHT);
         _podium.transform.rotation = transform.rotation;
     }
 
@@ -196,8 +200,7 @@ public class Player : MonoBehaviour
 
         if (Status == PlayerStatus.Idle)
         {
-            //TODO: MAGIC NUMBER
-            transform.position += new Vector3(0, 0.1f, 0);
+            transform.position += new Vector3(0, PLAYER_IDLE_Y, 0);
             _podium.gameObject.SetActive(true);
             LockPodiumPosition();
             _rigidBody.constraints = RigidbodyConstraints.None;
@@ -257,9 +260,8 @@ public class Player : MonoBehaviour
     {
         gameObject.SetActive(false);
 
-        //TODO: MAGIC NUMBER
         if (_status != PlayerStatus.Idle)
-            FindObjectOfType<PlayerOrganiser>().FinishTurnIfActivePlayer(this, 2.5f);            
+            FindObjectOfType<PlayerOrganiser>().FinishTurnIfActivePlayer(this, _delayAfterTurn);            
     }
 
     public void DoExplosiveDamage(Vector3 position, float radius, float force, float damageMultiplier=1)
@@ -267,7 +269,7 @@ public class Player : MonoBehaviour
         float distance = Vector3.Distance(transform.position, position);
         float distancePercent = Mathf.Sqrt(Mathf.Clamp01(distance / radius));
 
-        //TODO: MAGIC NUMBER
+        //TODO: Want to look more into this and whether I should use consts or something else
         // Standing right next to it does 650, so this should be about 92 at point blank
         float damageVal = ((1 - distancePercent) * force) / 7;
         W2CManager.DoDamageBurst((int) damageVal, this, transform.position);
