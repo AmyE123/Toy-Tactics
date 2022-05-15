@@ -12,6 +12,9 @@ public class SoldierAnimations : MonoBehaviour
     const string IS_JUMPING = "isJumping";
     const string END_CHOICE = "endChoice";
 
+    private const float RUN_TIME = 0.1f;
+    private const int ANIM_COUNT = 4;
+
     public enum EndPose { Think, Tpose, PraiseTheSun, Dab };
     private float _runTime;
     private bool _isJumping;
@@ -24,8 +27,7 @@ public class SoldierAnimations : MonoBehaviour
 
     public void SetAsRunning()
     {
-        //TODO: MAGIC NUMBER
-        _runTime = 0.1f;
+        _runTime = RUN_TIME;
     }
 
     public void StartJumping()
@@ -47,9 +49,8 @@ public class SoldierAnimations : MonoBehaviour
     {
         _anim.SetBool(IS_STATIC, true);
 
-        //TODO: MAGIC NUMBERS
-        int randChoice = Random.Range(0, 4);
-        _anim.SetFloat(END_CHOICE, ((float) randChoice) / 3f );
+        int randChoice = Random.Range(0, ANIM_COUNT);
+        _anim.SetFloat(END_CHOICE, ((float) randChoice) / ANIM_COUNT - 1);
     }
 
     // Update is called once per frame
