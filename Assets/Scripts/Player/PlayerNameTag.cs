@@ -7,7 +7,7 @@ public class PlayerNameTag : W2C
 {
     [SerializeField]TextMeshProUGUI playerName;
 
-    public void setPlayerName(string playerNameString)
+    public void SetPlayerName(string playerNameString)
     {
         playerName.text = playerNameString;
     }

@@ -91,7 +91,7 @@ public class Player : MonoBehaviour
         }
 
         if (playerUI != null)
-            playerUI.setPlayerName(_playerName);
+            playerUI.SetPlayerName(_playerName);
     }
 
     public bool IsGrounded => _movement.IsGrounded;
@@ -132,7 +132,7 @@ public class Player : MonoBehaviour
     {
         playerUI = W2C.InstantiateAs<PlayerUI>(playerUIPrefab);
         playerUI.SetPosition(transform, Vector3.up);
-        playerUI.setPlayerName(_playerName);
+        playerUI.SetPlayerName(_playerName);
         playerUI.Init(this);
 
         if (_teamData != null)
