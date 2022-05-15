@@ -13,7 +13,8 @@ You're a toy soldier, and you have to defeat the enemy soldiers! Navigate throug
     * [Prerequisites](#prerequisites)
     * [Installing](#installing)
 3. [Built With](#built-with)
-4. [Authors](#authors)
+4. [Coding Conventions](#coding-conventions)
+5. [Authors](#authors)
 
 ## Additional Information
 As this game started as a Gamejam project which me and Joe worked on, I decided it might be nice to spend some time refactoring the project as I've learnt lots over these past few months working in the Games Industry!
