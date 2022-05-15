@@ -1,10 +1,18 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class PlayerAI : MonoBehaviour
 {
     private const float END_TURN_FAILSAFE_DELAY = 8f;
+    private const int CLOSEST_DIST = 9999;
+
+    private const float LOW_RAY_Y = 0.6f;
+    private const float HIGH_RAY_Y = 2f;
+    private const float LOW_HIT_DIST = 1.5f;
+    private const float HIGH_HIT_DIST = 2;
 
     [SerializeField] private Player _player;
     [SerializeField] private PlayerMove _move;
@@ -170,9 +178,8 @@ public class PlayerAI : MonoBehaviour
 
     Player FindClosestWeakTeamPlayer()
     {
-        //TODO: MAGIC NUMBERS
         Player closest = null;
-        float closestDist = 99999;
+        float closestDist = CLOSEST_DIST;
 
         var teamHealthInfo = FindObjectOfType<TeamManager>().CalculateTotalTeamHealth();
         var teamList = teamHealthInfo.SortedListOfTeams();
@@ -233,15 +240,14 @@ public class PlayerAI : MonoBehaviour
 
     void CheckIfCanJump()
     {
-        //TODO: MAGIC NUMBERS
         RaycastHit lowHit;
         RaycastHit highHit;
 
-        Ray lowRay = new Ray(transform.position - new Vector3(0f, 0.6f, 0f) , transform.forward);
-        Ray highRay = new Ray(transform.position + new Vector3(0f, 2f, 0f) , transform.forward);
+        Ray lowRay = new Ray(transform.position - new Vector3(0f, LOW_RAY_Y, 0f) , transform.forward);
+        Ray highRay = new Ray(transform.position + new Vector3(0f, HIGH_RAY_Y, 0f) , transform.forward);
 
-        bool didHitLow = Physics.Raycast(lowRay, out lowHit, 1.5f);
-        bool didHitHigh = Physics.Raycast(highRay, out highHit, 2f);
+        bool didHitLow = Physics.Raycast(lowRay, out lowHit, LOW_HIT_DIST);
+        bool didHitHigh = Physics.Raycast(highRay, out highHit, HIGH_HIT_DIST);
 
         float lowHitDistance = lowHit.distance;
 
@@ -253,8 +259,12 @@ public class PlayerAI : MonoBehaviour
             }
         }
 
-        Debug.DrawRay(transform.position - new Vector3(0f, 0.6f, 0f) , transform.forward, Color.black);
-        Debug.DrawRay(transform.position + new Vector3(0f, 2f, 0f) , transform.forward, Color.red);
+        DebugDrawRay();
+    }
 
+    void DebugDrawRay()
+    {
+        Debug.DrawRay(transform.position - new Vector3(0f, LOW_RAY_Y, 0f), transform.forward, Color.black);
+        Debug.DrawRay(transform.position + new Vector3(0f, HIGH_RAY_Y, 0f), transform.forward, Color.red);
     }
 }

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerHumanInput : MonoBehaviour
 {
+    private const float MAGNITUDE_THRESHOLD = 0.25f;
+
     [SerializeField] Player _player;
     [SerializeField] GameSettings _settings;
 
@@ -62,7 +64,6 @@ public class PlayerHumanInput : MonoBehaviour
 
         float currentY = _player.Cameras.firstPersonCam.transform.localEulerAngles.x;
 
-        //TODO: MAGIC NUMBERS
         if (currentY > 180)
             currentY -= 360;
 
@@ -95,8 +96,7 @@ public class PlayerHumanInput : MonoBehaviour
         if (_player.Movement.jetpackActive)
             _player.Movement.jump.isRequested = false;
 
-        //TODO: MAGIC NUMBERS
-        if (_player.Movement.move.desiredVelocity.magnitude > 0.25f)
+        if (_player.Movement.move.desiredVelocity.magnitude > MAGNITUDE_THRESHOLD)
         {
             bool isJetpacking = _player.Movement.jetpackActive && _player.Movement.IsGrounded == false;
 
