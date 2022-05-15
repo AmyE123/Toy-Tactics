@@ -6,6 +6,10 @@ using DG.Tweening;
 
 public class PlayerUI : W2C
 {
+    private const float DEATH_SCREEN_FADE_DURATION = 0.8f;
+    private const int DEATH_TRANSITION_DELAY = 3;
+    private const float BUTTON_SCALE_DURATION = 0.5f;
+
     [SerializeField] private Text _playerName;
     [SerializeField] private Text _healthText;
     [SerializeField] private Text _selectText;
@@ -44,7 +48,7 @@ public class PlayerUI : W2C
         _healthText.text = currentHP.ToString();
 
         if (currentHP == 0 && _canvasGroup.alpha > 0)
-            _canvasGroup.DOFade(0, 0.8f).SetEase(Ease.Linear).SetDelay(3);
+            _canvasGroup.DOFade(0, DEATH_SCREEN_FADE_DURATION).SetEase(Ease.Linear).SetDelay(DEATH_TRANSITION_DELAY);
     }
 
     public void setPlayerName(string playerNameString)
@@ -54,7 +58,7 @@ public class PlayerUI : W2C
 
     public void HideButton()
     {
-        _goButtonRect.DOScale(0, 0.5f).SetEase(Ease.InElastic).OnComplete(() => _goButtonRect.gameObject.SetActive(false));
+        _goButtonRect.DOScale(0, BUTTON_SCALE_DURATION).SetEase(Ease.InElastic).OnComplete(() => _goButtonRect.gameObject.SetActive(false));
         _goButtonRect.gameObject.SetActive(false);
     }
 
@@ -62,7 +66,8 @@ public class PlayerUI : W2C
     {
         _goButtonRect.localScale = Vector3.zero;
         _goButtonRect.gameObject.SetActive(true);
-        _goButtonRect.DOScale(1, 0.5f).SetEase(Ease.OutElastic);
+
+        _goButtonRect.DOScale(1, BUTTON_SCALE_DURATION).SetEase(Ease.OutElastic);
 
     }
 }

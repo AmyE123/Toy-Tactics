@@ -67,7 +67,7 @@ public class Explosive : MonoBehaviour
             }
             else
             {
-                // Todo maybe use tags for fragile glass too?
+                // TODO: maybe use tags for fragile glass too?
                 var block = col.GetComponent<FragilePhysicsBlock>();
                 block?.DoExplosiveDamage(transform.position, _radius, _force);
             }

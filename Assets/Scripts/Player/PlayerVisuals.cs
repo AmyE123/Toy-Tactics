@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerVisuals : MonoBehaviour
 {
+    private const int FIRST_PERSON_ALPHA_TIME = 2;
+    private const int ALPHA_TIME = 5;
+
     [SerializeField] private Rigidbody[] _gibs;
     [SerializeField] private JetpackVisuals _jetpack;
     [SerializeField] private Transform _heavyBoots;
@@ -38,7 +41,7 @@ public class PlayerVisuals : MonoBehaviour
 
         if(_player.Cameras.IsFirstPerson)
         {
-            materialAlpha = Mathf.Lerp(materialAlpha, _firstPersonAlpha, 2f * Time.deltaTime);    
+            materialAlpha = Mathf.Lerp(materialAlpha, _firstPersonAlpha, FIRST_PERSON_ALPHA_TIME * Time.deltaTime);    
             if(_player.Status == Player.PlayerStatus.Idle)
             {
                 materialAlpha = 1;
@@ -46,7 +49,7 @@ public class PlayerVisuals : MonoBehaviour
         }
         else
         {
-            materialAlpha = Mathf.Lerp(materialAlpha, 1, 5f * Time.deltaTime);
+            materialAlpha = Mathf.Lerp(materialAlpha, 1, ALPHA_TIME * Time.deltaTime);
         }
     }
 

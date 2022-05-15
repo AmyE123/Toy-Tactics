@@ -7,6 +7,7 @@ public class GameSettings : ScriptableObject
 {
     public bool invertX;
     public bool invertY;
+
     public float mouseSensitivity = 5;
 
     public float musicVolume;

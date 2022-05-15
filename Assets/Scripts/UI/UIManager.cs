@@ -52,7 +52,7 @@ public class UIManager : MonoBehaviour
         if (isActive)
             Cursor.lockState = CursorLockMode.None;
         
-        // TODO rather than doing this every frame better to do only on dismiss
+        // TODO: rather than doing this every frame better to do only on dismiss
         if (_playerMan.ActivePlayer != null && isActive == false)
             Cursor.lockState = CursorLockMode.Locked;
 

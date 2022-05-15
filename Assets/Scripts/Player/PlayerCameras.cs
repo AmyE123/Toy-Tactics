@@ -5,6 +5,8 @@ using Cinemachine;
 
 public class PlayerCameras : MonoBehaviour
 {
+    private const int CAM_AIM_SPEED = 5;
+
     public enum CameraView { ThirdPerson, FirstPerson, EnemyFollow };
 
     [SerializeField] CameraView _selectedCamera;
@@ -55,7 +57,9 @@ public class PlayerCameras : MonoBehaviour
         vectorToTarget.Normalize();
 
         Quaternion targetRotation = Quaternion.LookRotation(vectorToTarget);
-        firstPersonCam.transform.rotation = Quaternion.Lerp(firstPersonCam.transform.rotation, targetRotation, Time.deltaTime * 5f);
+        firstPersonCam.transform.rotation = Quaternion.Lerp(firstPersonCam.transform.rotation, targetRotation, Time.deltaTime * CAM_AIM_SPEED);
+        
+        //TODO: Make more clear what this does
         return Vector3.Dot(vectorToTarget, firstPersonCam.transform.forward) > 0.9995f;
     }
 }

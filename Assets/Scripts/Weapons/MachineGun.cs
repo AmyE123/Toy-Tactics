@@ -38,7 +38,7 @@ public class MachineGun : EquipableItem
 
     IEnumerator ShootRoutine()
     {
-        // TODO take into account bullet spread
+        // TODO: take into account bullet spread
         Camera cam = Camera.main;
 
         for (int i=0; i<_shotCount; i++)
