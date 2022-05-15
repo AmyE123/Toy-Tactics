@@ -51,7 +51,7 @@ public class PlayerUI : W2C
             _canvasGroup.DOFade(0, DEATH_SCREEN_FADE_DURATION).SetEase(Ease.Linear).SetDelay(DEATH_TRANSITION_DELAY);
     }
 
-    public void setPlayerName(string playerNameString)
+    public void SetPlayerName(string playerNameString)
     {
         _playerName.text = playerNameString;
     }    
