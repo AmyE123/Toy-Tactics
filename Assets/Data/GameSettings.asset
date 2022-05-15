@@ -15,12 +15,12 @@ MonoBehaviour:
   invertX: 0
   invertY: 0
   mouseSensitivity: 5
-  musicVolume: 0.5
-  soundVolume: 0.75
+  musicVolume: 0
+  soundVolume: 0
   levels:
   - {fileID: 11400000, guid: 87d37b76b1781e44ab2d24c6ecadff27, type: 2}
   - {fileID: 11400000, guid: 73874d50627890a40a66a5c2d6dc2dd0, type: 2}
   - {fileID: 11400000, guid: d9df21856fedf1d4f839d1a92b850993, type: 2}
-  - {fileID: 11400000, guid: ab605fdf397391d4b8da2ced69c6253c, type: 2}
   - {fileID: 11400000, guid: c2ebaea13c1d3e04c86362a128d985bf, type: 2}
-  selectedLevel: 2
+  - {fileID: 11400000, guid: ab605fdf397391d4b8da2ced69c6253c, type: 2}
+  selectedLevel: 1
