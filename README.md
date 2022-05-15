@@ -44,6 +44,9 @@ Here is how you can get the game running for development and testing purposes:
 * [Unity](https://unity3d.com/get-unity/download/archive) - The game engine used
 * [Visual Studio Code](https://code.visualstudio.com/) - The IDE used
 
+## Coding Conventions
+I'm using the official [Microsoft C# Coding Conventions](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions) with my code
+
 ## Authors
 * **Amy Elliott** - *Initial Gamejam Development & Refactoring* 
 * **Joe Shanahan** - *Initial Gamejam Development* - [Portfolio](https://www.3djoe.co.uk/) 
