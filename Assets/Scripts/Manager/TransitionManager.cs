@@ -36,7 +36,7 @@ public class TransitionManager : MonoBehaviour
 
     public static void GoToMapNumber(int levelId)
     {
-        _instance._settings.selectedLevel = levelId;
+        _instance._settings.SelectedLevel = levelId;
         LevelData level = _instance._settings.GetCurrentLevel();
 
         if (level == null)
@@ -47,7 +47,7 @@ public class TransitionManager : MonoBehaviour
 
     public static void GoToNextMap()
     {
-        _instance._settings.selectedLevel ++;
+        _instance._settings.SelectedLevel ++;
         LevelData level = _instance._settings.GetCurrentLevel();
 
         if (level == null)

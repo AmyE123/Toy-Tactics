@@ -12,7 +12,7 @@ public class LevelGrid : MonoBehaviour
     {
         int i=0;
 
-        foreach (LevelData lvl in _settings.levels)
+        foreach (LevelData lvl in _settings.Levels)
         {
             GameObject newObj = Instantiate(_buttonPrefab, transform);
             newObj.GetComponent<PlayLevelButton>().Init(lvl, i);

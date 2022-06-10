@@ -15,28 +15,28 @@ public class SettingsMenu : MonoBehaviour
 
     public void MusicSliderChanged(float val)
     {
-        _settings.musicVolume = val;
+        _settings.MusicVolume = val;
         MusicManager.UpdateVolumeBasedOnSettings();
     }
 
     public void SoundSliderChanged(float val)
     {
-        _settings.soundVolume = val;
+        _settings.SoundVolume = val;
     }
 
     public void MouseSliderChanged(float val)
     {
-        _settings.mouseSensitivity = val;
+        _settings.MouseSensitivity = val;
     }
 
     public void InvertXChanged(bool newState)
     {
-        _settings.invertX = newState;
+        _settings.InvertX = newState;
     }
 
     public void InvertYChanged(bool newState)
     {
-        _settings.invertY = newState;
+        _settings.InvertY = newState;
     }
 
     public void SaveSettings()
@@ -46,12 +46,12 @@ public class SettingsMenu : MonoBehaviour
 
     public void SyncUI()
     {
-        _musicSlider.value = _settings.musicVolume;
-        _sfxSlider.value = _settings.soundVolume;
-        _mouseSensSlider.value = _settings.mouseSensitivity;
+        _musicSlider.value = _settings.MusicVolume;
+        _sfxSlider.value = _settings.SoundVolume;
+        _mouseSensSlider.value = _settings.MouseSensitivity;
 
-        _invertX.isOn = _settings.invertX;
-        _invertY.isOn = _settings.invertY;
+        _invertX.isOn = _settings.InvertX;
+        _invertY.isOn = _settings.InvertY;
     }
 
     // Start is called before the first frame update

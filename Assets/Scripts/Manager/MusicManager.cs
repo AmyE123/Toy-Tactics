@@ -28,6 +28,6 @@ public class MusicManager : MonoBehaviour
 
     public static void UpdateVolumeBasedOnSettings()
     {
-        _instance._musicPlayer.volume = _instance._settings.musicVolume * _instance._volumeMultiplier;
+        _instance._musicPlayer.volume = _instance._settings.MusicVolume * _instance._volumeMultiplier;
     }
 }

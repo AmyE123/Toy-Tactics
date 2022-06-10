@@ -45,8 +45,8 @@ public class PlayerHumanInput : MonoBehaviour
             _player.Movement.jump.isRequested = false;
         }
 
-        float rotX = Input.GetAxis("Mouse X") * _settings.mouseSensitivity;
-        float rotY = Input.GetAxis("Mouse Y") * _settings.mouseSensitivity;
+        float rotX = Input.GetAxis("Mouse X") * _settings.MouseSensitivity;
+        float rotY = Input.GetAxis("Mouse Y") * _settings.MouseSensitivity;
 
         bool isWeaponActive = Input.GetKey(KeyCode.E) || Input.GetMouseButton(1);
 
@@ -56,10 +56,10 @@ public class PlayerHumanInput : MonoBehaviour
             rotY = 0;
         }
 
-        if (_settings.invertX)
+        if (_settings.InvertX)
             rotX = -rotX;
 
-        if (_settings.invertY)
+        if (_settings.InvertY)
             rotY = -rotY;
 
         float currentY = _player.Cameras.firstPersonCam.transform.localEulerAngles.x;

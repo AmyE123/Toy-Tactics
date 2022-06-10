@@ -31,7 +31,7 @@ public class SoundManager : MonoBehaviour
     {
         GameObject spawnedObj = new GameObject($"Sound Effect ({sound.name})");
         AudioSource audio = spawnedObj.AddComponent<AudioSource>();
-        audio.volume = volume * _settings.soundVolume;
+        audio.volume = volume * _settings.SoundVolume;
         audio.pitch = pitch;
         audio.PlayOneShot(sound);
 

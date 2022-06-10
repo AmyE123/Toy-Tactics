@@ -32,13 +32,13 @@ public class ThirdPersonCamera : MonoBehaviour
 
     private void InputRotation()
     {
-        float rotX = Input.GetAxis("Mouse X") * _settings.mouseSensitivity;
-        float rotY = Input.GetAxis("Mouse Y") * _settings.mouseSensitivity;
+        float rotX = Input.GetAxis("Mouse X") * _settings.MouseSensitivity;
+        float rotY = Input.GetAxis("Mouse Y") * _settings.MouseSensitivity;
 
-        if (_settings.invertX)
+        if (_settings.InvertX)
             rotX = -rotX;
 
-        if (_settings.invertY)
+        if (_settings.InvertY)
             rotY = -rotY;
 
         float currentUpDown = transform.localEulerAngles.x;
