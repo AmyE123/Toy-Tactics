@@ -8,6 +8,7 @@ public class TitleScreenUI : MonoBehaviour
 
     [SerializeField] private SlidingMenu _rootMenu;
     [SerializeField] private SlidingMenu _levelSelectMenu;
+    [SerializeField] private SlidingMenu _onlineLevelSelectMenu;
     [SerializeField] private SlidingMenu _settingsMenu;
     [SerializeField] private SlidingMenu _teamMenu;
 
@@ -32,12 +33,19 @@ public class TitleScreenUI : MonoBehaviour
         _levelSelectMenu?.SetMenuActive(false);
         _settingsMenu?.SetMenuActive(false);
         _teamMenu?.SetMenuActive(false);
+        _onlineLevelSelectMenu?.SetMenuActive(false);
     }
 
     public void GoToLevelSelect()
     {
         _rootMenu?.SetMenuActive(false);
         _levelSelectMenu?.SetMenuActive(true);
+    }
+
+    public void GoToOnline()
+    {
+        _rootMenu?.SetMenuActive(false);
+        _onlineLevelSelectMenu?.SetMenuActive(true);
     }
 
     public void GoToTeamSettings()
