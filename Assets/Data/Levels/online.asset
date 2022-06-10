@@ -12,14 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62be51de30bb8cd41924952f5e702d75, type: 3}
   m_Name: online
   m_EditorClassIdentifier: 
-  levelName: Hello World
-  description: 'Learn the
-
-    basics'
-  prefab: {fileID: 7207083356121034992, guid: f787fd3e70989194f8dc15e0d5f1719e, type: 3}
+  levelName: Online Test
+  description: Test for online
+  prefab: {fileID: 7207083356121034992, guid: 7593833e95589e443853dbac0d3ace33, type: 3}
   teamOrder:
   - {fileID: 11400000, guid: 6fc1fcdd0143c4947ad217ec354b4402, type: 2}
-  - {fileID: 11400000, guid: 2562f587717a1e94fbdeeeadf43b6920, type: 2}
+  - {fileID: 11400000, guid: 7dde97d1ece3bc7449e1595ce6a4ec8b, type: 2}
   isTutorial: 1
   startLoadout:
   - slotNum: 0

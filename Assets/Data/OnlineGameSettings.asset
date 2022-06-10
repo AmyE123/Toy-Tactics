@@ -18,5 +18,7 @@ MonoBehaviour:
   musicVolume: 0
   soundVolume: 0
   levels:
-  - {fileID: 11400000, guid: 87d37b76b1781e44ab2d24c6ecadff27, type: 2}
+  - {fileID: 11400000, guid: 8f896b3ed134fb84fa7cb37281ae017a, type: 2}
+  - {fileID: 11400000, guid: 8f896b3ed134fb84fa7cb37281ae017a, type: 2}
+  - {fileID: 11400000, guid: 8f896b3ed134fb84fa7cb37281ae017a, type: 2}
   selectedLevel: 1
