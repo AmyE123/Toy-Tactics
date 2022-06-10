@@ -67,7 +67,7 @@ public class MatchController : MonoBehaviour
     {
         TeamData team = _teamList[_currentTeamNum];
 
-        if (team.isComputerControlled)
+        if (team.IsComputerControlled)
         {
             Player chosenPlayer = _teamManager.GetRandomMemberOfTeam(team);
             _playerManager.SelectPlayer(chosenPlayer);

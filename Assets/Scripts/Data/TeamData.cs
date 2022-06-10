@@ -1,15 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [CreateAssetMenu(menuName ="Teams/New Team")]
 public class TeamData : ScriptableObject
 {
-    public string teamName;
-    public bool isComputerControlled;
-    public Color color;
-    public Color textColor;
-    public string[] memberNames;
+    public string TeamName;
+    public bool IsComputerControlled;
+    public Color Color;
+    public Color TextColor;
+    public string[] MemberNames;
 
     public void SaveToPrefs()
     {

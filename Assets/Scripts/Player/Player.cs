@@ -81,13 +81,13 @@ public class Player : MonoBehaviour
         if (_teamData == null)
             return;
 
-        if (_teamData.memberNames.Length <= pid)
+        if (_teamData.MemberNames.Length <= pid)
         {
             _playerName = $"Solider {pid + 1}";
         }
         else
         {
-            _playerName = _teamData.memberNames[pid];
+            _playerName = _teamData.MemberNames[pid];
         }
 
         if (playerUI != null)
@@ -136,7 +136,7 @@ public class Player : MonoBehaviour
         playerUI.Init(this);
 
         if (_teamData != null)
-            playerUI.SetColor(_teamData.textColor);
+            playerUI.SetColor(_teamData.TextColor);
     } 
 
     void LockPodiumPosition()

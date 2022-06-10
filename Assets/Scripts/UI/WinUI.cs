@@ -43,7 +43,7 @@ public class WinUI : MonoBehaviour
     public void ShowData(TeamData team, int roundNum)
     {
         _gameOverText.text = "GAME OVER";
-        _teamNameText.text = team.teamName.ToUpper() + " WINS";
+        _teamNameText.text = team.TeamName.ToUpper() + " WINS";
         string mapName = _settings.GetCurrentLevel().LevelName.ToUpper();
 
         roundNum ++;
@@ -53,8 +53,8 @@ public class WinUI : MonoBehaviour
         else
             _mapNameText.text = $"{mapName} | 1 TURN TAKEN";
 
-        _teamNameText.color = team.textColor;
-        _mapNameText.color = team.textColor;
+        _teamNameText.color = team.TextColor;
+        _mapNameText.color = team.TextColor;
 
         ShowAnimation();
     }

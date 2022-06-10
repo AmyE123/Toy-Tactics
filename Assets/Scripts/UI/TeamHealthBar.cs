@@ -11,7 +11,7 @@ public class TeamHealthBar : MonoBehaviour
     public void SetInfo(TeamData team, int currentHealth, int maxHealth)
     {
         _progBar.fillAmount = (float) currentHealth / (float) maxHealth;
-        _teamName.text = team.teamName;
-        _progBar.color = new Color(team.color.r, team.color.g, team.color.b, _progBar.color.a);
+        _teamName.text = team.TeamName;
+        _progBar.color = new Color(team.Color.r, team.Color.g, team.Color.b, _progBar.color.a);
     }
 }

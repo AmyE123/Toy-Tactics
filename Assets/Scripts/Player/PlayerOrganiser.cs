@@ -27,7 +27,7 @@ public class PlayerOrganiser : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_activePlayer != null && _activePlayer.Team.isComputerControlled == false && Input.GetKeyDown(KeyCode.T) && _turnSkipCooldown == false)
+        if (_activePlayer != null && _activePlayer.Team.IsComputerControlled == false && Input.GetKeyDown(KeyCode.T) && _turnSkipCooldown == false)
         {
             FinishTurnForActivePlayer();
             Invoke("TurnSkipCooldownReset", TURN_SKIP_COOLDOWN_COUNT);
@@ -47,7 +47,7 @@ public class PlayerOrganiser : MonoBehaviour
         
         _activePlayer = player;
 
-        if (player.Team.isComputerControlled)
+        if (player.Team.IsComputerControlled)
             player.AIControlPlayer();
         else
             player.TakeControlOfPlayer();

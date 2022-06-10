@@ -82,8 +82,8 @@ public class PlayerVisuals : MonoBehaviour
         }
 
         Material mat = new Material(_playerMat);
-        mat.color = teamData.color;
-        mat.SetColor("_AlbedoColor", teamData.color);
+        mat.color = teamData.Color;
+        mat.SetColor("_AlbedoColor", teamData.Color);
 
         foreach (MeshRenderer rend in GetComponentsInChildren<MeshRenderer>())
             rend.material = mat;

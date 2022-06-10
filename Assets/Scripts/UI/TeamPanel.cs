@@ -16,13 +16,13 @@ public class TeamPanel : MonoBehaviour
     public void ShowDataOnUi()
     {
         _team.LoadPrefs();
-        _teamName.text = _team.teamName;
+        _teamName.text = _team.TeamName;
         
         for (int i=0; i<4; i++)
         {
-            if (i < _team.memberNames.Length)
+            if (i < _team.MemberNames.Length)
             {
-                _characterNames[i].text = _team.memberNames[i];
+                _characterNames[i].text = _team.MemberNames[i];
             }   
             else
             {
@@ -32,24 +32,24 @@ public class TeamPanel : MonoBehaviour
 
         foreach (Graphic g in _toTheme)
         {
-            g.color = _team.textColor;
+            g.color = _team.TextColor;
         }
 
-        _background.color = _team.color;
-        _cpuControl.isOn = _team.isComputerControlled;
+        _background.color = _team.Color;
+        _cpuControl.isOn = _team.IsComputerControlled;
     }
 
     public void Sync()
     {
-        _team.teamName = _teamName.text;
+        _team.TeamName = _teamName.text;
 
-        _team.memberNames = new string[4];
-        _team.memberNames[0] = _characterNames[0].text;
-        _team.memberNames[1] = _characterNames[1].text;
-        _team.memberNames[2] = _characterNames[2].text;
-        _team.memberNames[3] = _characterNames[3].text;
+        _team.MemberNames = new string[4];
+        _team.MemberNames[0] = _characterNames[0].text;
+        _team.MemberNames[1] = _characterNames[1].text;
+        _team.MemberNames[2] = _characterNames[2].text;
+        _team.MemberNames[3] = _characterNames[3].text;
 
-        _team.isComputerControlled = _cpuControl.isOn;
+        _team.IsComputerControlled = _cpuControl.isOn;
 
         _team.SaveToPrefs();
     }

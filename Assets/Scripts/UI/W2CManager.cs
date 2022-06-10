@@ -24,7 +24,7 @@ using UnityEngine;
         public static void DoDamageBurst(int damage, Player player, Vector3 pos)
         {
             DamageBurst dburst = InstantiateAs<DamageBurst>(_instance._damageBurst);
-            dburst.Init(damage, player.Team.textColor);
+            dburst.Init(damage, player.Team.TextColor);
             dburst.SetPosition(pos);
         }
 

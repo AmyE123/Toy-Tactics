@@ -14,15 +14,15 @@ public class RoundUI : MonoBehaviour
     
     public void ShowData(TeamData team, int roundNum, System.Action OnComplete)
     {
-        _teamNameText.text = team.teamName.ToUpper();
+        _teamNameText.text = team.TeamName.ToUpper();
         _roundNumText.text = $"TURN {roundNum + 1}";
         _yourTurnText.text = "IT'S YOUR TURN";
         
-        if (team.isComputerControlled)
+        if (team.IsComputerControlled)
             _yourTurnText.text = "CPU PLAYERS TURN";
 
-        _teamNameText.color = team.textColor;
-        _roundNumText.color = team.textColor;
+        _teamNameText.color = team.TextColor;
+        _roundNumText.color = team.TextColor;
 
         StartCoroutine(ShowAnimation(OnComplete));
     }
