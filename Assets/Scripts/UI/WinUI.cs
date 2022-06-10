@@ -25,7 +25,7 @@ public class WinUI : MonoBehaviour
     {       
         _gameOverText.text = "EVERYONE LOSES";
         _teamNameText.text = "DRAW";
-        string mapName = _settings.GetCurrentLevel().levelName.ToUpper();
+        string mapName = _settings.GetCurrentLevel().LevelName.ToUpper();
 
         roundNum ++;
 
@@ -44,7 +44,7 @@ public class WinUI : MonoBehaviour
     {
         _gameOverText.text = "GAME OVER";
         _teamNameText.text = team.teamName.ToUpper() + " WINS";
-        string mapName = _settings.GetCurrentLevel().levelName.ToUpper();
+        string mapName = _settings.GetCurrentLevel().LevelName.ToUpper();
 
         roundNum ++;
 

@@ -9,7 +9,7 @@ public class WorldSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Instantiate(_settings.GetCurrentLevel().prefab, transform);
+        Instantiate(_settings.GetCurrentLevel().Prefab, transform);
         FindObjectOfType<PlayerOrganiser>().Init();
         FindObjectOfType<TeamManager>().Init();
         FindObjectOfType<MatchController>().Init();

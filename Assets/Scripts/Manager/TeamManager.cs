@@ -122,7 +122,7 @@ public class TeamManager : MonoBehaviour
         foreach (TeamData team in allTeams.Keys)
         {
             TeamInventory inv = new TeamInventory();
-            inv.SetItems(_settings.GetCurrentLevel().startLoadout);
+            inv.SetItems(_settings.GetCurrentLevel().StartLoadout);
 
             for (int i=0; i<allTeams[team].Count; i++)
             {

@@ -42,9 +42,9 @@ public class MatchController : MonoBehaviour
         _level = _settings.GetCurrentLevel();
         _teamList = _teamManager.AllTeams.OrderBy(x => Random.value).ToList();
 
-        if (_level.teamOrder.Count > 0)
+        if (_level.TeamOrder.Count > 0)
         {
-            _teamList = _level.teamOrder;
+            _teamList = _level.TeamOrder;
         }
     }
 

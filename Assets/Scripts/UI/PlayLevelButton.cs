@@ -15,8 +15,8 @@ public class PlayLevelButton : MonoBehaviour
     {
         _level = level;
         _levelIdx = idx;
-        _titleText.text = level.levelName.ToUpper();
-        _descText.text = level.description;
+        _titleText.text = level.LevelName.ToUpper();
+        _descText.text = level.Description;
     }
 
     public void ButtonPress()

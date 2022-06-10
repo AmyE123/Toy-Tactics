@@ -1,26 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [CreateAssetMenu]
 public class LevelData : ScriptableObject
 {
-    public string levelName;
-    
+    public string LevelName;
+
     [TextArea]
-    public string description;
+    public string Description;
 
-    public GameObject prefab;
+    public GameObject Prefab;
 
-    public List<TeamData> teamOrder;
+    public List<TeamData> TeamOrder;
 
-    public bool isTutorial;
+    public bool IsTutorial;
 
-    public List<EquipmentAmount> startLoadout;
+    public List<EquipmentAmount> StartLoadout;
 
-    public Material levelSkybox;
+    public Material LevelSkybox;
 
-    public Vector3 levelSize;
+    public Vector3 LevelSize;
 
-    public Texture wallpaper;
+    public Texture Wallpaper;
 }
